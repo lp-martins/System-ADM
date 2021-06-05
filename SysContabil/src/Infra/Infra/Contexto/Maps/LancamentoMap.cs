@@ -14,6 +14,7 @@ namespace Infra.Contexto.Maps
             builder.Property(x => x.Debito).IsRequired().HasColumnType("varchar(12)");
             builder.Property(x => x.Credito).IsRequired().HasColumnType("varchar(12)");
             builder.Property(x => x.Valor).IsRequired().HasColumnType("decimal");
+            builder.Property(x => x.ReciboFiscal).IsRequired().HasColumnType("varchar(25)");
         }
     }
 

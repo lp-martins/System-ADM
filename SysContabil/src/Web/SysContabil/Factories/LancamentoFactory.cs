@@ -14,7 +14,8 @@ namespace SysContabil.Factories
                 DataDoPlano = lancamento.Data,
                 Debito = lancamento.Debito,
                 Credito = lancamento.Credito,
-                Valor = lancamento.Valor
+                Valor = lancamento.Valor,
+                ReciboFiscal = lancamento.ReciboFiscal
             };
             return lancamentoViewModel;
         }
@@ -25,7 +26,8 @@ namespace SysContabil.Factories
                 lancamentoViewModel.DataDoPlano,
                 lancamentoViewModel.Debito,
                 lancamentoViewModel.Credito,
-                lancamentoViewModel.Valor
+                lancamentoViewModel.Valor,
+                lancamentoViewModel.ReciboFiscal
                 );
             return lancamento;
         }

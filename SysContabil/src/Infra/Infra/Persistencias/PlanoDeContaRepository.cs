@@ -2,7 +2,6 @@
 using Dominio.IRepositories;
 using Infra.Contexto;
 using Microsoft.EntityFrameworkCore;
-using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -16,7 +15,7 @@ namespace Infra.Persistencias
             _dataContext = dataContext;
         }
         public async Task Criar(PlanoDeConta planoDeConta)
-        {
+        {  
             _dataContext.PlanoDeContas.Add(planoDeConta);
             await _dataContext.SaveChangesAsync();
         }

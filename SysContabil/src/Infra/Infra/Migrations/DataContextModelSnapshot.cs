@@ -37,18 +37,19 @@ namespace Infra.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(12)");
 
-                    b.Property<int>("IdPlanoDeConta")
-                        .HasColumnType("int");
-
-                    b.Property<string>("PlanoDeContaNumeroDaConta")
+                    b.Property<string>("PlanoDeContaID")
                         .HasColumnType("varchar(12)");
+
+                    b.Property<string>("ReciboFiscal")
+                        .IsRequired()
+                        .HasColumnType("varchar(25)");
 
                     b.Property<decimal>("Valor")
                         .HasColumnType("decimal");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("PlanoDeContaNumeroDaConta");
+                    b.HasIndex("PlanoDeContaID");
 
                     b.ToTable("Lancamentos");
                 });
@@ -71,7 +72,7 @@ namespace Infra.Migrations
                 {
                     b.HasOne("Dominio.Entidades.PlanoDeConta", "PlanoDeConta")
                         .WithMany("Lancamentos")
-                        .HasForeignKey("PlanoDeContaNumeroDaConta");
+                        .HasForeignKey("PlanoDeContaID");
                 });
 #pragma warning restore 612, 618
         }

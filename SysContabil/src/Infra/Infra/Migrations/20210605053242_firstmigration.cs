@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Infra.Migrations
 {
-    public partial class secondarymigration : Migration
+    public partial class firstmigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -25,28 +25,28 @@ namespace Infra.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    IdPlanoDeConta = table.Column<int>(nullable: false),
                     Data = table.Column<DateTime>(type: "DATE", nullable: false),
                     Debito = table.Column<string>(type: "varchar(12)", nullable: false),
                     Credito = table.Column<string>(type: "varchar(12)", nullable: false),
                     Valor = table.Column<decimal>(type: "decimal", nullable: false),
-                    PlanoDeContaNumeroDaConta = table.Column<string>(nullable: true)
+                    ReciboFiscal = table.Column<string>(type: "varchar(25)", nullable: false),
+                    PlanoDeContaID = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Lancamentos", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Lancamentos_PlanoDeContas_PlanoDeContaNumeroDaConta",
-                        column: x => x.PlanoDeContaNumeroDaConta,
+                        name: "FK_Lancamentos_PlanoDeContas_PlanoDeContaID",
+                        column: x => x.PlanoDeContaID,
                         principalTable: "PlanoDeContas",
                         principalColumn: "NumeroDaConta",
                         onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Lancamentos_PlanoDeContaNumeroDaConta",
+                name: "IX_Lancamentos_PlanoDeContaID",
                 table: "Lancamentos",
-                column: "PlanoDeContaNumeroDaConta");
+                column: "PlanoDeContaID");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

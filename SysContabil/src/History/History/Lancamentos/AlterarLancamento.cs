@@ -16,7 +16,7 @@ namespace History.Lancamentos
         public async Task Executar(int id, Lancamento lancamento)
         {
             var dadosDoLancamento = await _lancamentoRepository.BuscaPorID(id);
-            dadosDoLancamento.AtualizarLancamento(lancamento.Data, lancamento.Debito, lancamento.Credito, lancamento.Valor);
+            dadosDoLancamento.AtualizarLancamento(lancamento.Data, lancamento.Debito, lancamento.Credito, lancamento.Valor, lancamento.ReciboFiscal);
             await _lancamentoRepository.Alterar(dadosDoLancamento);
         }
     }

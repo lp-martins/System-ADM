@@ -428,3 +428,6 @@ C:\Users\MARTINS\Desktop\System-ADM\SysContabil\src\Web\SysContabil\obj\Debug\ne
 C:\Users\MARTINS\Desktop\System-ADM\SysContabil\src\Web\SysContabil\obj\Debug\netcoreapp3.1\Razor\Views\PlanoDeContas\Index.cshtml.g.cs
 C:\Users\MARTINS\Desktop\System-ADM\SysContabil\src\Web\SysContabil\obj\Debug\netcoreapp3.1\Razor\Views\PlanoDeContas\Criar.cshtml.g.cs
 C:\Users\MARTINS\Desktop\System-ADM\SysContabil\src\Web\SysContabil\obj\Debug\netcoreapp3.1\Razor\Views\Lancamento\Criar.cshtml.g.cs
+C:\Users\MARTINS\Desktop\System-ADM\SysContabil\src\Web\SysContabil\obj\Debug\netcoreapp3.1\Razor\Views\Balancete\Index.cshtml.g.cs
+C:\Users\MARTINS\Desktop\System-ADM\SysContabil\src\Web\SysContabil\obj\Debug\netcoreapp3.1\Razor\Views\Balancete\Alterar.cshtml.g.cs
+C:\Users\MARTINS\Desktop\System-ADM\SysContabil\src\Web\SysContabil\obj\Debug\netcoreapp3.1\Razor\Views\Balancete\Detalhar.cshtml.g.cs
